@@ -1,15 +1,15 @@
 
 const prompt = require('prompt-sync')();
-let num = Number(prompt('Class size'))
-let group3 = num / 3;
+let size = Number(prompt('Class size'))
 console.log("The number of 3 person groups you can have is:"  + Math.trunc   (group3));
-let group2 = (num % 3);
-if (group2 === 0){
+
+
+if (size % 3 === 0){
 console.log("No additional groups are needed"); 
 }
-else if (group2 ===1){
- console.log("Not ennough students to form additional group");
+else if (size % 3 === 1){
+ console.log("one group of 3 and one group of 2");
 }
-else if (group2 ===2){
-   console.log("Create one 2 person group");
+else if (size % 3 === 2){
+   console.log("Create one group of 3 and one group of 2");
 }
